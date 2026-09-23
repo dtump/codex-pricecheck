@@ -12,12 +12,16 @@ from collections import defaultdict
 from pathlib import Path
 
 
-# input, cached input, output — USD per 1M tokens (checked 2026-09-12).
-# Sources: https://developers.openai.com/api/docs/models/gpt-6-astra and
-# https://developers.openai.com/api/docs/models/compare.  These are current
-# public API prices, not historical invoice prices.
+# input, cached input, output — USD per 1M tokens (checked 2026-09-23).
+# Sources: https://developers.openai.com/api/docs/pricing,
+# https://developers.openai.com/api/docs/models/gpt-6-astra,
+# https://developers.openai.com/api/docs/models/gpt-6-sol, and
+# https://developers.openai.com/api/docs/models/gpt-6-luna. These are current
+# standard public API prices, not historical invoice prices.
 PRICES = {
     "gpt-6-astra": (10.00, 1.00, 50.00),
+    "gpt-6-sol": (2.00, 0.20, 10.00),
+    "gpt-6-luna": (0.10, 0.01, 0.50),
     "gpt-5.6-sol": (4.00, 0.40, 20.00),
     "gpt-5.6-terra": (2.00, 0.20, 12.00),
     "gpt-5.6-luna": (0.20, 0.02, 1.20),
